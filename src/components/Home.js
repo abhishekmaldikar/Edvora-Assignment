@@ -31,10 +31,14 @@ const Home = () => {
     } , []);
   return (
     <div>
-      
-      
-      <Products state = {state} dispatch = {dispatch}/>
-      <Cart state = {state} dispatch = {dispatch}/>
+      <div className="row">
+      <div className="col-9">
+        <Products state = {state} dispatch = {dispatch}/>
+      </div>
+      <div className="col-3">
+        <Cart state = {state} dispatch = {dispatch}/>
+      </div>
+      </div>
     </div>
   )
 }

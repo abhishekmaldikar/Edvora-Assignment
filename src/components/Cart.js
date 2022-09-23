@@ -42,8 +42,8 @@ const Cart = ({state,dispatch}) => {
         cart.length>0 ?( cart.map( (prod) =>(
           <div
           key={prod.title}
-          > <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
+          > <Card className="mb-2" style={{ width: '18rem' }}>
+          <Card.Img variant="top" src="./dummy-product_2.jpg" />
           <Card.Body>
             <Card.Title>{prod.title}</Card.Title>
             <Card.Text>

@@ -10,6 +10,8 @@ export const cartReducer = (state,action) => {
         case 'CHANGE_CART_QTY':
             return {...state,cart:state.cart.filter((c)=>
                 c.product_id===action.payload.product_id?(c.qty=action.payload.qty): c.qty)}
+        //case 'EMPTY_CART':
+          //  return {...state,cart:state.cart.pop()}
         default:
             break;
     }

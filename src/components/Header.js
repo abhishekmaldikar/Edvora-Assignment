@@ -13,7 +13,11 @@ const Header = () => {
 
 
   return (
-    <Navbar bg="secondary" variant="dark" className="mb-3" style={{ height: 80 }}>
+    <Navbar bg="secondary" variant="dark" className="mb-3" style={{ height: 80 ,position: "fixed",
+      top: 0,
+      width: "100%",
+      left: 0,
+      right:0, zIndex : 1000}}>
       <Container>
         <Navbar.Brand>
           <a to="/">Shopping Cart</a>

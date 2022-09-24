@@ -1,15 +1,5 @@
 import React from 'react'
-import {
-    Badge,
-    Button,
-    Container,
-    Dropdown,
-    FormControl,
-    Nav,
-    Navbar,
-    Card,
-    ListGroup
-}from "react-bootstrap";
+import { Button , Card ,ListGroup }from "react-bootstrap";
 import '../App.css';
 
 const Products = ({ state, dispatch }) => {
@@ -17,7 +7,7 @@ const Products = ({ state, dispatch }) => {
     const { products, cart } = state;
 
     return (
-        <div className='row border-end'>
+        <div className='row border-end' style={{paddingLeft :"20px" , paddingTop : "100px"}}>
             {products.map((prod) => (
                 <div className='col mb-3'>
                   <Card style={{ width: '20vw' }}>
@@ -30,7 +20,7 @@ const Products = ({ state, dispatch }) => {
                       </Card.Text>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                      <ListGroup.Item>${prod.selling_price}</ListGroup.Item>
+                      <ListGroup.Item>₹{prod.selling_price}</ListGroup.Item>
                       <ListGroup.Item>{prod.stock} left</ListGroup.Item>
                       <ListGroup.Item>
                         {

@@ -35,9 +35,17 @@ const Cart = ({state,dispatch}) => {
 
 
   return (
-    <div >
-      <b className='cart'>Cart</b>
-      <b>Subtotal:$ {total}</b>
+    <div className="parent">
+      <div className="scroll">
+      <b className='cart'> Your Basket </b>
+      <br></br>
+      <Navbar.Text onClick={() => dispatch({
+        type : 'EMPTY_CART',
+        })}>
+          
+      </Navbar.Text>
+      
+      
       {
         cart.length>0 ?( cart.map( (prod) =>(
           <div
@@ -46,10 +54,8 @@ const Cart = ({state,dispatch}) => {
           <Card.Img variant="top" src="./dummy-product_2.jpg" />
           <Card.Body>
             <Card.Title>{prod.title}</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
+            <Card.Title>₹{prod.price}</Card.Title>
+            
             <div className="button">
             <Button onClick={ ()=> changeQty(prod.product_id,prod.qty-1)}
             variant="danger">-</Button>{''}
@@ -62,8 +68,11 @@ const Cart = ({state,dispatch}) => {
         </div>
         ) 
         ) )
-         :(<samp>Cart is empty</samp>)
+         :(<samp>  is empty</samp>)
       }
+      
+      </div>
+      <div style={{padding: "15px", borderRadius:"10px" , border : "0.5px solid #787878" , marginTop : "20px" }}>Subtotal:₹ {total}</div>
     </div>
   )
 }

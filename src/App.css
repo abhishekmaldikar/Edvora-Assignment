@@ -31,3 +31,32 @@
     width: 20%;
     align-self: center;
 }  */
+.scroll{
+    
+    height: calc(80vh - 70px);
+    overflow-y: scroll;
+    overflow-x: hidden ;
+
+}
+.scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+.scroll {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+  }
+
+.parent {
+    position: fixed;
+    top: 100px;
+    right: 0px;
+  }
+.header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
